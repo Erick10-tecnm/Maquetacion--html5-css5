@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva Hotel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- jQuery y jQuery UI para el calendario -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Hotel Logo" class="logo">
+        <nav>
+            <a href="Home.html" class="active">Home</a>
+            <a href="acercaDe.html">Acerca de</a>
+            <a href="habitaciones.html">Habitaciones</a>
+            <a href="instalaciones.html">Instalaciones</a>
+            <a href="contacto.html">Contacto</a>
+ 
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- Imagen de fondo -->
+        </section>
+
+        <section class="reservation-form">
+            <div class="input-group">
+                <input type="text" id="checkin" placeholder="dd/mm/aaaa" readonly>
+                <span class="icon-calendar"></span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="checkout" placeholder="dd/mm/aaaa" readonly>
+                <span class="icon-calendar"></span>
+            </div>
+            <div class="input-group">
+                <select id="adults">
+                    <option value="" disabled selected >Adults</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <select id="children">
+                    <option value="" disabled selected>Children</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <button id="check-availability">Check</button>
+        </section>
+    </main>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+:root {
+    --card-bg: #F2E8DA;
+    --descripcion-bg: #F2E8DA;
+    --button-bg: #213516;
+    --button-hover-bg: #333;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d9bfa4; /* Fondo de la página */
+    margin: 0;
+    padding: 0;
+    color: #000; /* Texto en negro */
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.logo {
+    max-width: 50px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+header {
+    background-color: #60452d; /* Fondo de la barra café */
+    color: #000;
+    padding: 5px 0;
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    margin-top: -20px;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-weight: bold; /* Aplica negrita al texto */
+}
+/* Sección de Información de Contacto */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #e0c2a2;
+}
+
+.info-card {
+    background-color: #ecd8bf;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-card i {
+    margin-right: 5px;
+}
+
+.info-card p a {
+    color: #000;
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+.info-card button {
+    background: none;
+    border: 1px solid #000;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+/* Estilo general del formulario */
+.contact-form {
+    padding: 2rem;
+    background-color: #e0c2a2;
+    text-align: center;
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: una para campos a la izquierda y otra para comentarios a la derecha */
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: start; /* Alinea todos los elementos al inicio de la fila */
+}
+
+.form-group.left {
+    grid-column: 1 / 2; /* Columna izquierda */
+}
+
+.form-group.right {
+    grid-column: 2 / 3; /* Columna derecha */
+    grid-row: 1 / span 2; /* Abarca dos filas, alineando el textarea con la altura de "Nombre" y "Email" */
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho total */
+}
+
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    height: calc(2 * 2.5rem + 1rem); /* Ajusta la altura para igualar la suma de los campos de Nombre y Email */
+    box-sizing: border-box;
+    resize: none; /* Evita el cambio de tamaño del textarea */
+}
+
+/* Botón de envío */
+button[type="submit"] {
+    grid-column: span 2; /* El botón ocupa ambas columnas */
+    padding: 0.5rem 2rem;
+    background-color: #60452d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #3b2a1a;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .form-group.right {
+        grid-column: 1 / -1; /* Ocupa toda la fila en pantallas pequeñas */
+        grid-row: auto; /* Resetea la altura en pantallas pequeñas */
+    }
+}

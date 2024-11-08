@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones Disponibles</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="img/logo.png" alt="Hotel Logo" class="logo">
+        <nav class="navbar">
+            <a href="Home.html">Home</a>
+            <a href="acercaDe.html">Acerca de</a>
+            <a href="habitaciones.html">Habitaciones</a>
+            <a href="instalaciones.html">Instalaciones</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <h2>Habitaciones disponibles</h2>
+            <div class="reservation-form">
+                <div class="input-group">
+                    <input type="text" id="checkin" placeholder="Fecha de entrada" readonly>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="checkout" placeholder="Fecha de salida" readonly>
+                </div>
+                <div class="input-group">
+                    <select id="adults">
+                        <option value="" disabled selected>Adultos</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <select id="children">
+                        <option value="" disabled selected>Niños</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="rooms-section">
+            <div class="room">
+                <img src="img/h1.png" alt="Habitación 1">
+                <div class="room-details">
+                    <h3>Tipo de habitación</h3>
+                    <p>Descripción (según la coincidencia de búsqueda)</p>
+                    <button class="btn-reserve">Reservar ahora</button>
+                </div>
+            </div>
+            <div class="room">
+                <img src="img/h2.png " alt="Habitación 2">
+                <div class="room-details">
+                    <h3>Tipo de habitación</h3>
+                    <p>Descripción (según la coincidencia de búsqueda)</p>
+                    <button class="btn-reserve">Reservar ahora</button>
+                </div>
+            </div>
+            <div class="room">
+                <img src="img/h3.png" alt="Habitación 3">
+                <div class="room-details">
+                    <h3>Tipo de habitación</h3>
+                    <p>Descripción (según la coincidencia de búsqueda)</p>
+                    <button class="btn-reserve">Reservar ahora</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="script/script2.js"></script>
+</body>
+</html>

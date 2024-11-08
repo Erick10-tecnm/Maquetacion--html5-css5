@@ -1,0 +1,140 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d9bfa4;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    background-color: #d9bfa4; /* Fondo blanco para resaltar el contenido */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo h1 {
+    font-size: 2rem;
+    color: #623E2A;
+    text-align: center;
+}
+
+.descripcion {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.Col1, .Col2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {    
+    width: 100%;
+    height: 450px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.imagenHabitacion{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button {
+    background-color: #181e03;
+    color: #d9bfa4;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #333;
+}
+
+/* Media Queries */
+
+/* Pantallas grandes (laptops y escritorio) */
+@media (min-width: 992px) {
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .Col1 {
+        width: 50%;
+        padding: 20px;
+    }
+
+    .Col2 {
+        width: 50%;
+    }
+}
+
+/* Pantallas medianas (tablets y dispositivos pequeños) */
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .titulo h1 {
+        font-size: 1.8rem;
+    }
+
+    .button {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .titulo h1 {
+        font-size: 1.5rem;
+    }
+
+    .descripcion {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

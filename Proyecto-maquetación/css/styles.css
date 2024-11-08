@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D9C3AB; /* Color de fondo general de la página */
+}
+
+header {
+    background-color: #60452d; /* Color de fondo de la cabecera */
+    padding: 5px 0; /* Espaciado arriba y abajo */
+}
+
+header nav {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 20px; /* Espacio entre los enlaces */
+}   
+
+header nav a {
+    text-decoration: none;
+    color: #000000; /* Color de los enlaces */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold;
+    padding: 8px 12px; /* Espaciado interno de los enlaces */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición para el hover */
+}
+
+header nav a:hover {
+    color: #D9C3AB;; /* Color de los enlaces al pasar el mouse */
+    background-color: #3a1f1f; /* Fondo al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados en el hover */
+}
+
+.logo {
+    width: 50px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('../img/LobbyHotelHome.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation-form {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -40px;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    background-color: transparent; /* Fondo transparente */
+    border-radius: 0; /* Sin bordes redondeados */
+    box-shadow: none; /* Sin sombra */
+}
+
+
+.input-group {
+    position: relative;
+}
+
+.input-group input, .input-group select {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 150px;
+    text-align: center;
+    color: #3D2C23;
+    background-color: #fff;
+}
+
+button#check-availability {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Icono de calendario */
+.icon-calendar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #3D2C23;
+}
+
+/* Ajuste de diseño en móviles */
+@media (max-width: 768px) {
+    .reservation-form {
+        flex-direction: column;
+        width: 100%;
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garantía de Reservación - Nubes de Mitla</title>
+    <link rel="stylesheet" href="css/GarantiaReservacion.css">
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <div class="header-container">
+        <img src="img/logo.png" alt="Logo Nubes de Mitla" class="logo">
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="acercaDe.html">Acerca de</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="instalaciones.html">Instalaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Contenedor principal para el formulario de garantía de reservación -->
+<div class="container">
+    <h2>Garantía de Reservación</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="nombre-tarjeta">Nombre del Titular de la Tarjeta</label>
+            <input type="text" id="nombre-tarjeta" name="nombre-tarjeta" required placeholder="Ingrese el nombre tal como aparece en la tarjeta">
+        </div>
+        <div class="form-group">
+            <label for="numero-tarjeta">Número de Tarjeta</label>
+            <input type="text" id="numero-tarjeta" name="numero-tarjeta" required placeholder="#### #### #### ####" maxlength="19">
+        </div>
+        <div class="form-group">
+            <label for="fecha-vencimiento">Fecha de Vencimiento</label>
+            <input type="text" id="fecha-vencimiento" name="fecha-vencimiento" required placeholder="MM/AA" maxlength="5">
+        </div>        
+        <div class="form-group">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" name="cvc" required placeholder="###" maxlength="3">
+        </div>
+    </form>
+</div>
+
+<form action="#" method="post">
+    <!-- Campos de datos de la tarjeta como en el HTML anterior... -->
+    
+    <!-- Términos y condiciones -->
+    <div class="terms">
+        <label>
+            <input type="checkbox" id="acepta-privacidad" required>
+            He leído y acepto la <a href="#">Política de Privacidad</a>. Autorizo al establecimiento el tratamiento de mis datos personales.
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="acepta-condiciones" required>
+            He leído y acepto las condiciones descritas anteriormente para la cancelación de esta reserva.
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="email-correcto" required>
+            Mi dirección e-mail es correcta.
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="confirma-campos" required>
+            Marca los campos para confirmar.
+        </label>
+    </div>
+
+    <!-- Botón de Envío -->
+    <div class="form-group">
+        <button type="submit" id="submit-button" disabled>Garantizar Reservación</button>
+    </div>
+</form>
+
+
+
+<footer>
+    <p>&copy; 2024 Nubes de Mitla Hotel & Resort. Todos los derechos reservados.</p>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const checkboxPrivacidad = document.getElementById('acepta-privacidad');
+        const checkboxCondiciones = document.getElementById('acepta-condiciones');
+        const checkboxEmailCorrecto = document.getElementById('email-correcto');
+        const checkboxConfirmaCampos = document.getElementById('confirma-campos');
+        const submitButton = document.getElementById('submit-button');
+
+        // Función para habilitar/deshabilitar el botón de envío
+        function checkCheckboxes() {
+            if (checkboxPrivacidad.checked && checkboxCondiciones.checked &&
+                checkboxEmailCorrecto.checked && checkboxConfirmaCampos.checked) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        }
+
+        // Escucha el cambio en cada checkbox
+        checkboxPrivacidad.addEventListener('change', checkCheckboxes);
+        checkboxCondiciones.addEventListener('change', checkCheckboxes);
+        checkboxEmailCorrecto.addEventListener('change', checkCheckboxes);
+        checkboxConfirmaCampos.addEventListener('change', checkCheckboxes);
+    });
+</script>
+
+
+</body>
+</html>

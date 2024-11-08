@@ -1,0 +1,87 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #D8BBA3;
+    color: #3D2C23;
+}
+
+/* Encabezado */
+.header {
+    background-color: #60452d;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+}
+
+/* Contenedor principal */
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.confirmation-details {
+    text-align: center;
+    max-width: 500px;
+}
+
+.confirmation-details h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.confirmation-details h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .confirmation-container {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 50px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .confirmation-details {
+        max-width: 400px;
+        padding-left: 30px;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .confirmation-container {
+        padding: 100px;
+    }
+}

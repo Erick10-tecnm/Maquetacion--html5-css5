@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Personal - Nubes de Mitla</title>
+    <link rel="stylesheet" href="css/PagoReservacion.css"> <!-- Enlaza el CSS específico -->
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <div class="header-container">
+        <img src="img/logo.png" alt="Logo Nubes de Mitla" class="logo">
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="acercaDe.html">Acerca de</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="instalaciones.html">Instalaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Contenedor principal para el formulario de información personal -->
+<div class="container">
+    <h2>Información Personal</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="nombre-completo">Nombre Completo</label>
+            <input type="text" id="nombre-completo" name="nombre-completo" required placeholder="Ingrese su nombre completo">
+        </div>
+        <div class="form-group">
+            <label for="correo-electronico">Correo Electrónico</label>
+            <input type="email" id="correo-electronico" name="correo-electronico" required placeholder="Ingrese su correo electrónico">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Ingrese su número de teléfono">
+        </div>
+        <div class="form-group">
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" required placeholder="Ingrese su dirección">
+        </div>
+        <div class="form-group">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" required placeholder="Ingrese su ciudad">
+        </div>
+        <div class="form-group">
+            <label for="codigo-postal">Código Postal</label>
+            <input type="text" id="codigo-postal" name="codigo-postal" required placeholder="Ingrese su código postal">
+        </div>
+        <div class="form-group">
+            <button type="submit">Pago de Reservación</button>
+        </div>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Nubes de Mitla Hotel & Resort. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

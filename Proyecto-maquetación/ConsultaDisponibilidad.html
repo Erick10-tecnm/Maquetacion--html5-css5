@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Disponibilidad - Nubes de Mitla</title>
+    <link rel="stylesheet" href="css/ConsultaDisponibilidad.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="img/logo.png" alt="Logo Nubes de Mitla" class="logo">
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="acercaDe.html" class="active">Acerca de</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="instalaciones.html">Instalaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="content-container">
+    <!-- Contenedor de formulario a la izquierda -->
+    <div class="form-container">
+        <h2>Consulta Disponibilidad</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre completo">
+            </div>
+            <div class="form-group">
+                <label for="fecha-entrada">Fecha de Entrada</label>
+                <input type="text" id="fecha-entrada" name="fecha-entrada" required readonly>
+            </div>
+            <div class="form-group">
+                <label for="fecha-salida">Fecha de Salida</label>
+                <input type="text" id="fecha-salida" name="fecha-salida" required readonly>
+            </div>
+            <div class="form-group">
+                <label for="adultos">Adultos</label>
+                <select id="adultos" name="adultos" required>
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ninos">Niños</label>
+                <select id="ninos" name="ninos">
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Consultar disponibilidad</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Contenedor de calendario a la derecha -->
+    <div class="calendar-container">
+        <div id="calendario"></div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Nubes de Mitla Hotel & Resort. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    // Iniciar el calendario y configurar para que seleccione fechas de entrada y salida
+    flatpickr("#calendario", {
+        inline: true, // Mostrar calendario permanentemente
+        mode: "range", // Permitir selección de rango
+        dateFormat: "Y-m-d",
+        onChange: function(selectedDates) {
+            // Asignar las fechas seleccionadas a los campos de llegada y salida
+            document.getElementById('fecha-entrada').value = selectedDates[0] ? selectedDates[0].toISOString().split('T')[0] : '';
+            document.getElementById('fecha-salida').value = selectedDates[1] ? selectedDates[1].toISOString().split('T')[0] : '';
+        }
+    });
+</script>
+
+</body>
+</html>

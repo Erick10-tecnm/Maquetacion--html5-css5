@@ -1,0 +1,152 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d9bfa4; /* Fondo de la página */
+    margin: 0;
+    padding: 0;
+    color: #000; /* Texto en negro */
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.logo {
+    max-width: 50px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-left: 10px; /* Ajusta este valor para mover el logo hacia el centro */
+    margin-top: 0px;
+}
+.imagen {
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+    overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
+}
+
+
+
+.imagen-quemes {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen se recorte a lo largo, no se deforme */
+    max-height: 300px; /* Limita la altura para que no se haga demasiado alta */
+}
+
+
+
+
+
+header {
+    background-color: #60452d; /* Fondo de la barra café */
+    color: #000;
+    padding: 5px 0; /* Reduce el padding superior e inferior */
+    height: 60px; /* Ajusta la altura de la barra a un tamaño más pequeño */
+}
+
+header h1 {
+    font-size: 1.5rem; /* Reduce el tamaño del texto del encabezado si es necesario */
+    line-height: 60px; /* Alinea verticalmente el texto dentro de la barra */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0; /* Elimina márgenes entre los elementos del menú */
+    margin-top: -20px;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000; /* Texto del menú en blanco */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d9bfa4; /* Cambio de color al pasar el cursor por los enlaces */
+}
+
+.acerca-de {
+    background: #d9bfa4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.acerca-de h2 {
+    font-size: 1.8rem;
+    color: #000; /* Títulos en el mismo color que la línea verde */
+    border-bottom: 2px solid #60452d;
+    padding-bottom: 5px;
+}
+
+.acerca-de p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #000; /* Texto en negro */
+}
+.mision {
+    display: flex; /* Utiliza flexbox para alinear el texto y la imagen horizontalmente */
+    justify-content: space-between; /* Separa el texto y la imagen */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 20px; /* Espacio superior entre secciones */
+}
+
+.mision .texto {
+    width: 60%; /* Ajusta el ancho del texto */
+    margin-bottom: 150px; /* Utiliza un margen inferior negativo para subir el texto */
+}
+
+.mision .imagen_2 {
+    width: 35%; /* Ajusta el ancho de la imagen */
+    text-align: right; /* Alinea la imagen a la derecha */
+    margin-top: 60px; /* Agrega un margen superior para mover la imagen hacia abajo */
+}
+
+.vision {
+    display: flex; /* Utiliza flexbox para alinear el texto y la imagen horizontalmente */
+    justify-content: space-between; /* Separa el texto y la imagen */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 20px; /* Espacio superior entre secciones */
+}
+
+.vision .texto {
+    width: 140%; /* Ajusta el ancho del texto */
+    margin-bottom: 300px; /* Mueve el texto un poco hacia arriba */
+}
+
+.vision .imagen img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+    max-width: 400px; /* Establece un tamaño máximo para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 100px; /* Ajusta este valor para mover la imagen a la derecha */
+}
+.quienes-somos .texto,
+.mision .texto,
+.vision .texto {
+    text-align: justify; /* Justifica el texto */
+}
+
+
+
+footer {
+    background-color: #60452d; /* Fondo del pie de página */
+    color: #d9bfa4;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+}
